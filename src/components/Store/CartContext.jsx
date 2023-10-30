@@ -6,8 +6,9 @@ const CartContext = createContext({
   removeItem: (id) => {},
 });
 
+//function for manage the state of cart
 function CartReducer(state, action) {
-  //function for add item in the cart
+  // for add item in the cart
   if (action.type === "ADD_ITEM") {
     const existingCartItemIndex = state.items.findIndex(
       (item) => item.id === action.item.id
@@ -33,7 +34,7 @@ function CartReducer(state, action) {
     return { ...state, items: updatedItems };
   }
 
-  //function for remove item in the cart
+  //for remove item in the cart
   if (action.type === "REMOVE_ITEM") {
     const existingCartItemIndex = state.items.findIndex(
       (item) => item.id === action.id
@@ -70,6 +71,7 @@ export function CartContextProvider({ children }) {
     dispatchCartAction({ type: "REMOVE_ITEM", id });
   }
 
+  //object with items in cart and add remove function
   const cartContext = {
     items: cart.items,
     addItem,

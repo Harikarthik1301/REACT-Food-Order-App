@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
 
-
+//initialized with default context object
 const UserProgressContext = createContext({
     progress: '',
     showCart: () =>{},
@@ -9,7 +9,7 @@ const UserProgressContext = createContext({
     hideCheckout: () =>{}
 });
 
-//function that maintains opening and closing of cart and checkout button 
+//function  that provide acces to child components to maintains opening and closing of cart and checkout button 
 export function UserProgressContextProvider({children}) {
 
     const [userProgress,setUserProgress] = useState('');
@@ -28,6 +28,7 @@ export function UserProgressContextProvider({children}) {
     }
     
 
+    //object for setting current value of userprogress to progress and refference of corresponding functions
     const UserProgressCtx = {
         progress :userProgress,
         showCart,
