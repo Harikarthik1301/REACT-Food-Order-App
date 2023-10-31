@@ -4,7 +4,7 @@ import CartContext from "./Store/CartContext.jsx";
 import { currencyFormatter } from "../util/formatting.js";
 import Button from "./UI/Button.jsx";
 import UserProgressContext from "./Store/UserProgressContext.jsx";
-import CartItem from "../CardItem.jsx";
+import CartItem from "./CardItem.jsx";
 
 
 export default function Cart() {

@@ -6,7 +6,7 @@ const CartContext = createContext({
   removeItem: (id) => {},
 });
 
-//function for manage the state of cart
+//function for manages the state of cart
 function CartReducer(state, action) {
   // for add item in the cart
   if (action.type === "ADD_ITEM") {

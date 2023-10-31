@@ -71,7 +71,7 @@ if(isSending) {
 if(data && !error){
   return <Modal open={userProgressCtx.progress === 'checkout'} onClose={handleCloseCheckout}>
     <h2>Success!</h2>
-    <p>Yor Order Was Submitted Successfully.</p>
+    <p>Your Order Was Submitted Successfully.</p>
     <p className="modal-actions">
       <Button onClick ={handleCloseCheckout}>Okay</Button>
     </p>
